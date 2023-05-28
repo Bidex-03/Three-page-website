@@ -81,7 +81,9 @@ const ContactPage = () => {
       </h1>
 
       <div className="flex flex-col mb-3">
-        <label htmlFor="name" className="text-Purplish-blue font-semibold">Name</label>
+        <label htmlFor="name" className="text-Purplish-blue font-semibold">
+          Name
+        </label>
         <input type="name" className={inputClasses} ref={nameInputRef} />
         {!formValidity.name && (
           <p className="text-error-red">Please enter a valid name!</p>
@@ -89,7 +91,9 @@ const ContactPage = () => {
       </div>
 
       <div className="flex flex-col mb-3">
-        <label htmlFor="email" className="text-Purplish-blue font-semibold">Email</label>
+        <label htmlFor="email" className="text-Purplish-blue font-semibold">
+          Email
+        </label>
         <input type="email" className={inputClasses} ref={emailInputRef} />
         {!formValidity.email && (
           <p className="text-error-red">Please enter a valid email address!</p>
@@ -97,7 +101,9 @@ const ContactPage = () => {
       </div>
 
       <div className="flex flex-col mb-3">
-        <label htmlFor="message" className="text-Purplish-blue font-semibold">Message</label>
+        <label htmlFor="message" className="text-Purplish-blue font-semibold">
+          Message
+        </label>
         <textarea
           type="message"
           rows="4"

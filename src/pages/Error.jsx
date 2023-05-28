@@ -14,7 +14,10 @@ const ErrorPage = () => {
           <p>An error occured!</p>
           <img src={Pawpaw} alt="Meme" />
           <p className="my-4">Comrade, na you know wetin you de find ooo!</p>
-          <Link to="/" className="w-[100%] px-4 bg-Purplish-blue text-center text-xl text-White py-2 rounded-[5px] hover:bg-Marine-blue cursor-pointer">
+          <Link
+            to="/"
+            className="w-[100%] px-4 bg-Purplish-blue text-center text-xl text-White py-2 rounded-[5px] hover:bg-Marine-blue cursor-pointer"
+          >
             Go back to Home
           </Link>
         </main>

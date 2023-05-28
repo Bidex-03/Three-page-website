@@ -6,12 +6,10 @@ import Card from "../UI/Card";
 const RootLayout = () => {
   return (
     <>
-      {/* <Card> */}
-        <Navigation />
-        <main>
-          <Outlet />
-        </main>
-      {/* </Card> */}
+      <Navigation />
+      <main>
+        <Outlet />
+      </main>
     </>
   );
 };
