@@ -54,7 +54,7 @@ const ContactPage = () => {
     setIsSubmitting(true);
 
     const res = await fetch(
-      "https://form-validation-2d58b-default-rtdb.firebaseio.com/message.json",
+      "https://contact-message-details-default-rtdb.firebaseio.com/message.json",
       {
         method: "POST",
         body: JSON.stringify({ details }),
@@ -71,7 +71,7 @@ const ContactPage = () => {
 
   // Dynamic class for input fields
   const inputClasses =
-    "text-Purplish-blue font-semibold mt-2 mb-1 px-4 py-2 rounded-[5px] bg-grey focus:outline-none resize-none";
+    "text-Marine-blue font-semibold mt-2 mb-1 px-4 py-2 rounded-[5px] bg-grey focus:outline-none resize-none";
 
   // Popup modal
   const formModalContent = (
@@ -86,7 +86,7 @@ const ContactPage = () => {
         </label>
         <input type="name" className={inputClasses} ref={nameInputRef} />
         {!formValidity.name && (
-          <p className="text-error-red">Please enter a valid name!</p>
+          <p className="text-Strawberry-red">Please enter a valid name!</p>
         )}
       </div>
 
@@ -96,7 +96,9 @@ const ContactPage = () => {
         </label>
         <input type="email" className={inputClasses} ref={emailInputRef} />
         {!formValidity.email && (
-          <p className="text-error-red">Please enter a valid email address!</p>
+          <p className="text-Strawberry-red">
+            Please enter a valid email address!
+          </p>
         )}
       </div>
 
@@ -111,7 +113,7 @@ const ContactPage = () => {
           ref={messageInputRef}
         />
         {!formValidity.message && (
-          <p className="text-error-red">Please enter a valid message!</p>
+          <p className="text-Strawberry-red">Please enter a valid message!</p>
         )}
       </div>
 
@@ -126,11 +128,7 @@ const ContactPage = () => {
 
   const isSubmittingModalContent = <p>Sending feedback data...</p>;
 
-  const didSubmitModalContent = (
-    <React.Fragment>
-      <p>Successfully sent the message!</p>
-    </React.Fragment>
-  );
+  const didSubmitModalContent = <p>Successfully sent the message!</p>;
 
   return (
     <Card className="w-[80%] md:w-[50%] lg:w-[30%] bg-pastel-blue m-auto mt-4 p-4 flex flex-col">
